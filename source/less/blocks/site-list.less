@@ -1,0 +1,34 @@
+.site-list {
+  list-style: none;
+}
+
+.site-list__link {
+  text-decoration: none;
+  color: @black;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+
+  @media (min-width: @tablet) {
+    font-size: 15px;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 17px;
+  }
+
+  &:nth-of-type(3),
+  &:nth-of-type(4) {
+    @media (min-width: @desktop) {
+      font-size: 15px;
+    }
+  }
+
+  &:hover {
+    color: fade(@black, 60%);
+  }
+
+  &:active {
+    color: fade(@black, 30%);
+  }
+}

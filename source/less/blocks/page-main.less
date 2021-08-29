@@ -1,0 +1,21 @@
+.page-main__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 27px;
+  color: @black;
+  background-image: url("img/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  @media (min-width: @tablet) {
+    font-size: 43px;
+    line-height: 50px;
+    background-image: url("img/hero-desktop.jpg");
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
