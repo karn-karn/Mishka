@@ -31,3 +31,18 @@
     line-height: 57px;
   }
 }
+
+
+@media (min-resolution: 2dppx) {
+  .reviews {
+    @media (min-width: @tablet) and (max-width: 1149px) {
+      background-image: url("img/review@2x.jpg");
+    }
+  }
+
+  .reviews__wrapper {
+    @media (min-width: @desktop) {
+      background-image: url("img/review@2x.jpg");
+    }
+  }
+}
