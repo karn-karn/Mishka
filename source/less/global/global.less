@@ -16,12 +16,22 @@ img {
   overflow: hidden;
 }
 
+.container {
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media (min-width: @tablet) {
+    padding: 0 50px;
+  }
+}
+
 .button {
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   font-size: 18px;
   text-transform: uppercase;
+  text-align: center;
   background-color: @white;
   border: 2px solid @black-text;
 

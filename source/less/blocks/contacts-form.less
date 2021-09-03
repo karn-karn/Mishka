@@ -1,6 +1,24 @@
 .contacts-form {
+  margin: 0;
+  padding: 0;
+
   @media (min-width: @tablet) {
     background-color: @grey;
+  }
+}
+
+.contacts-form__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts-form__item {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet) {
+    flex-direction: row;
   }
 }
 

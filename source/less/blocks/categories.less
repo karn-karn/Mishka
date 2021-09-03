@@ -1,4 +1,17 @@
+.categories__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet) {
+    flex-direction: row;
+  }
+}
+
 .categories__link {
+  display: block;
   color: @white;
   font-weight: 700;
   font-size: 19px;
@@ -9,12 +22,16 @@
     font-size: 20px;
     line-height: 30px;
   }
+}
 
-  &:first-of-type {
-    background-color: @tiffany-light;
-  }
+.categories__item {
+  flex-grow: 1;
+}
 
-  &:last-of-type {
-    background-color: @tiffany;
-  }
+.categories__item:first-child .categories__link {
+  background-color: @tiffany-light;
+}
+
+.categories__item:last-child .categories__link {
+  background-color: @tiffany;
 }

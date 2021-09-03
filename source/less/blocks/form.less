@@ -1,3 +1,21 @@
+.form fieldset {
+  border: none;
+}
+
+.form__type,
+.form__name,
+.form__more {
+  margin: 0 30px;
+
+  @media (min-width: @tablet) {
+    margin: 0 50px;
+  }
+}
+
+.form__color {
+  margin: 0;
+}
+
 .form__note {
   font-size: 14px;
   line-height: 16px;
@@ -5,5 +23,16 @@
   @media (min-width: @tablet) {
     font-size: 17px;
     line-height: 30px;
+  }
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 }

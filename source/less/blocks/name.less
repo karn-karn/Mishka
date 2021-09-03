@@ -1,3 +1,45 @@
+.name {
+  padding: 0;
+
+  @media (min-width: @tablet) {
+    margin: 0 50px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+  }
+}
+
+.name__title {
+  color: @tiffany-light;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.name__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet) {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    margin-top: -16px;
+  }
+}
+
+.name__item {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet) {
+    flex-direction: row;
+  }
+}
+
 .name__name {
   color: @black;
   font-weight: 700;

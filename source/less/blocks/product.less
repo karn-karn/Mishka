@@ -1,3 +1,26 @@
+.product {
+  @media (min-width: @tablet) and (max-width: 1149px) {
+    display: flex;
+  }
+}
+
+.product__img img {
+  @media (max-width: 1149px) {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+}
+
+.product__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product__title {
+  text-decoration: none;
+}
+
 .product__title h3 {
   margin: 0;
   padding: 0;
@@ -5,7 +28,6 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-  text-decoration: none;
 
   @media (min-width: @tablet) {
     font-size: 20px;

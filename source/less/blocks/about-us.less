@@ -20,6 +20,12 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+
+  @media (min-width: @tablet) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
 }
 
 .about-us__item {
@@ -31,5 +37,20 @@
   @media (min-width: @tablet) {
     font-size: 20px;
     line-height: 22px;
+
+    &:nth-child(1) {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+
+    &:nth-child(2) {
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
+
+    &:nth-child(3) {
+      grid-column-start: 1;
+      grid-row-start: 3;
+    }
   }
 }
