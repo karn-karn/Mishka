@@ -78,6 +78,15 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  fill: fade(@black, 20%);
+
+  &:hover {
+    fill: @tiffany-light;
+  }
+
+  &:active {
+    fill: fade(@tiffany-light, 30%);
+  }
 }
 
 .main-nav__search-text {
@@ -99,12 +108,15 @@
   line-height: 24px;
   font-weight: 700;
   text-decoration: none;
+  fill: fade(@black, 50%);
 
   &:hover {
     color: fade(@black, 60%);
+    fill: @tiffany-light;
   }
 
   &:active {
     color: fade(@black, 30%);
+    fill: fade(@tiffany-light, 30%);
   }
 }

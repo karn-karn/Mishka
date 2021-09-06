@@ -1,4 +1,10 @@
 .contacts {
+  @media (min-width: @tablet) and (max-width: 1149px) {
+    background-image: url("../img/flag.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
   @media (min-width: @desktop) {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -10,6 +16,9 @@
   @media (min-width: @desktop) {
     grid-column-start: 1;
     grid-row-start: 1;
+    background-image: url("../img/flag.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
   }
 }
 

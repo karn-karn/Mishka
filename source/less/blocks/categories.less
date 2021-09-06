@@ -1,3 +1,26 @@
+.categories {
+  position: relative;
+
+  &::after {
+    @media (min-width: @tablet) {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/zigzag-fill-tablet.svg");
+      background-repeat: repeat;
+      background-position: 0 0;
+    }
+
+    @media (min-width: @desktop) {
+      height: 34px;
+      background-image: url("../img/zigzag-fill-desktop.svg");
+    }
+  }
+}
+
 .categories__list {
   list-style: none;
   margin: 0;
@@ -30,8 +53,30 @@
 
 .categories__item:first-child .categories__link {
   background-color: @tiffany-light;
+  fill: fade(@tiffany-dark, 50%);
+}
+
+.categories__item:first-child:hover .categories__link {
+  background-color: @tiffany-light-hover;
+  fill: fade(@tiffany-dark, 70%);
+}
+
+.categories__item:first-child:active .categories__link {
+  background-color: @tiffany-light-hover;
+  fill: fade(@tiffany-dark, 30%);
 }
 
 .categories__item:last-child .categories__link {
   background-color: @tiffany;
+  fill: fade(@tiffany-dark, 50%);
+}
+
+.categories__item:last-child:hover .categories__link {
+  background-color: @tiffany-hover;
+  fill: fade(@tiffany-dark, 70%);
+}
+
+.categories__item:last-child:active .categories__link {
+  background-color: @tiffany-hover;
+  fill: fade(@tiffany-dark, 30%);
 }

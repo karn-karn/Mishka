@@ -13,6 +13,16 @@
 }
 
 .page-footer__logo {
+  fill: @black;
+
+  &:hover {
+    fill: @tiffany-hover;
+  }
+
+  &:active {
+    fill: fade(@tiffany-hover, 30%);
+  }
+
   @media (max-width: @mobile-max) {
     display: none;
   }
@@ -27,4 +37,16 @@
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
+}
+
+.page-footer__copyright-link {
+  fill: @tiffany-light;
+
+  &:hover {
+    fill: @tiffany-hover;
+  }
+
+  &:active {
+    fill: fade(@tiffany-hover, 30%);
+  }
 }
