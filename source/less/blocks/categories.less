@@ -2,10 +2,10 @@
   position: relative;
 
   &::after {
-    @media (min-width: @tablet) {
+    @media (min-width: @tablet) and (max-width: 1149px) {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: -12px;
       left: 0;
       width: 100%;
       height: 24px;
@@ -13,15 +13,15 @@
       background-repeat: repeat;
       background-position: 0 0;
     }
+  }
 
-    @media (min-width: @desktop) {
-      height: 34px;
-      background-image: url("../img/zigzag-fill-desktop.svg");
-    }
+  @media (min-width: @desktop) {
+    width: 1050px;
   }
 }
 
 .categories__list {
+  position: relative;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -31,19 +31,37 @@
   @media (min-width: @tablet) {
     flex-direction: row;
   }
+
+  &::after {
+    @media (min-width: @desktop) {
+      content: "";
+      position: absolute;
+      bottom: -17px;
+      left: -1200px;
+      width: 400%;
+      height: 34px;
+      background-image: url("../img/zigzag-fill-desktop.svg");
+      background-repeat: repeat;
+      background-position: 0 0;
+
+    }
+  }
 }
 
 .categories__link {
+  position: relative;
   display: block;
   color: @white;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
   text-decoration: none;
+  padding: 24px 0 31px 30px;
 
   @media (min-width: @tablet) {
     font-size: 20px;
     line-height: 30px;
+    padding: 25px 0 34px 36px;
   }
 }
 
@@ -59,6 +77,8 @@
 .categories__item:first-child:hover .categories__link {
   background-color: @tiffany-light-hover;
   fill: fade(@tiffany-dark, 70%);
+  margin-top: -5px;
+  padding-bottom: 39px;
 }
 
 .categories__item:first-child:active .categories__link {
@@ -69,14 +89,42 @@
 .categories__item:last-child .categories__link {
   background-color: @tiffany;
   fill: fade(@tiffany-dark, 50%);
+
+  @media (min-width: @tablet) {
+    padding: 25px 17px 34px 36px;
+  }
 }
 
 .categories__item:last-child:hover .categories__link {
   background-color: @tiffany-hover;
   fill: fade(@tiffany-dark, 70%);
+  margin-top: -5px;
+  padding-bottom: 39px;
 }
 
 .categories__item:last-child:active .categories__link {
   background-color: @tiffany-hover;
   fill: fade(@tiffany-dark, 30%);
+}
+
+.categories__item:first-child svg {
+  position: absolute;
+  top: 23px;
+  right: 37px;
+
+  @media (min-width: @tablet) {
+    top: 30px;
+    right: 37px;
+  }
+}
+
+.categories__item:last-child svg {
+  position: absolute;
+  top: 23px;
+  right: 28px;
+
+  @media (min-width: @tablet) {
+    top: 30px;
+    right: 34px;
+  }
 }
