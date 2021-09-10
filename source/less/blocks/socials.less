@@ -1,9 +1,15 @@
 .socials {
   list-style: none;
+  width: 142px;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet) {
+    align-items: flex-end;
+  }
 }
 
 .socials__link {
@@ -16,4 +22,8 @@
   &:active {
     fill: fade(@tiffany-hover, 30%);
   }
+}
+
+.socials__link svg {
+  display: block;
 }

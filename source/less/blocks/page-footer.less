@@ -1,14 +1,27 @@
 .page-footer {
   background-color: @grey;
+  padding: 25px 0 23px;
+
+  @media (min-width: @tablet) {
+    padding: 51px 0 49px;
+  }
 }
 
 .page-footer__wrapper {
+  height: 112px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 
   @media (min-width: @tablet) {
     flex-direction: row;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  @media (min-width: @desktop) {
+    width: 1050px;
   }
 }
 
@@ -29,14 +42,18 @@
 }
 
 .page-footer__copyright {
+  width: 182px;
+
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .page-footer__copyright-text {
   font-weight: 700;
   font-size: 19px;
   line-height: 18px;
+  margin-bottom: 9px;
 }
 
 .page-footer__copyright-link {
@@ -49,4 +66,8 @@
   &:active {
     fill: fade(@tiffany-hover, 30%);
   }
+}
+
+.page-footer__copyright-link svg {
+  display: block;
 }
