@@ -4,6 +4,20 @@
 
   @media (min-width: @tablet) {
     background-color: @grey;
+    padding-bottom: 49px;
+  }
+}
+
+.contacts-form__wrapper {
+  margin: 0 30px;
+
+  @media (min-width: @tablet) {
+    margin: 0 50px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 auto;
+    width: 1050px;
   }
 }
 
@@ -11,6 +25,14 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet) {
+    padding: 47px 0 0 0;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0 175px 0 0;
+  }
 }
 
 .contacts-form__item {
@@ -20,6 +42,14 @@
   @media (min-width: @tablet) {
     flex-direction: row;
   }
+
+  &:first-child {
+    margin-bottom: 34px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: 22px;
+    }
+  }
 }
 
 .contacts-form__name {
@@ -28,30 +58,88 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
-  margin: 0;
+  margin: 0 0 4px 0;
   padding: 0;
+
+  @media (max-width: @mobile-max) {
+    background-image: url("../img/line-form.svg");
+    background-repeat: no-repeat;
+    background-position: top 8px left 59px;
+    background-size: 100% 1px;
+  }
+
+  @media (min-width: @tablet) {
+    margin: 0;
+    padding-top: 18px;
+    display: block;
+    width: 167px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 19px;
+    padding-left: 62px;
+    width: 114px;
+  }
 }
 
 
 .contacts-form__input {
   color: fade(@black, 30%);
-  font-weight: 700;
   font-size: 17px;
   line-height: 18px;
+  border: none;
+  border-bottom: 2px solid @black;
+  background-color: transparent;
 
   @media (min-width: @tablet) {
     font-size: 19px;
+    flex-grow: 1;
+  }
+
+  &:focus {
+    color: @black-text;
+  }
+
+  &:hover,
+  &:active {
+    border-color: @tiffany-form;
   }
 }
 
 .contacts-form__item:first-child .contacts-form__input {
+  padding: 14px 0 16px;
   background-image: url("../img/phone.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: top 11px right 7px;
+
+  @media (min-width: @tablet) {
+    padding-left: 17px;
+    background-position: top 14px right 27px;
+  }
+
+  @media (min-width: @desktop) {
+    background-position: top 14px right 7px;
+  }
 }
 
- .contacts-form__item:last-child .contacts-form__input {
+.contacts-form__item:last-child .contacts-form__input {
+  padding: 16px 0 14px;
   background-image: url("../img/mail.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: top 17px right 3px;
+
+  @media (min-width: @tablet) {
+    padding-left: 18px;
+    background-position: top 19px right 23px;
+  }
+
+  @media (min-width: @desktop) {
+    background-position: top 19px right 3px;
+  }
+}
+
+.contacts-form__item:last-child .contacts-form__name {
+  @media (max-width: @mobile-max) {
+    background-position: top 8px left 78px;
+  }
 }

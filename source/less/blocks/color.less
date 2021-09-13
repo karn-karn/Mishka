@@ -3,6 +3,11 @@
 
   @media (min-width: @tablet) {
     background-color: @grey;
+    padding: 50px 0 30px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 46px 0 30px;
   }
 }
 
@@ -12,8 +17,13 @@
 
   @media (min-width: @tablet) {
     margin: 0 50px;
-    grid-template-columns: auto auto;
+    grid-template-columns: 167px auto;
     grid-template-rows: auto;
+  }
+
+  @media (min-width: @desktop) {
+    width: 1050px;
+    grid-template-columns: 175px auto;
   }
 }
 
@@ -23,8 +33,24 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
-  margin: 0;
+  margin: 0 0 25px 0;
   padding: 0;
+
+  @media (max-width: @mobile-max) {
+    background-image: url("../img/line-form.svg");
+    background-repeat: no-repeat;
+    background-position: top 8px left 59px;
+    background-size: 100% 1px;
+  }
+
+  @media (min-width: @tablet) {
+    padding-top: 16px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 62px;
+    padding-top: 19px;
+  }
 }
 
 .color__list {
@@ -38,21 +64,82 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, auto);
+    grid-column-gap: 26px;
   }
 
   @media (min-width: @desktop) {
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
+    grid-column-gap: 0;
+    margin-right: 46px;
+  }
+}
+
+.color__item {
+  &:not(:last-child) {
+    margin: 0 0 23px 0;
   }
 }
 
 .color__name {
+  position: relative;
+  padding: 10px 0 10px 61px;
   color: @black;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
+  display: block;
 
   @media (min-width: @tablet) {
     font-size: 19px;
+    padding: 16px 0 18px 82px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 19px 0 15px 82px;
+  }
+}
+
+.color__checkbox + .color__name::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  border: 2px solid @black-text;
+
+  @media (min-width: @tablet) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.color__checkbox:hover + .color__name::before {
+  border-color: @tiffany-form;
+}
+
+
+.color__checkbox:active + .color__name::before {
+  border-color: fade(@black, 30%);
+}
+
+.color__checkbox:checked + .color__name::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 7px;
+  width: 24px;
+  height: 17px;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  @media (min-width: @tablet) {
+    top: 16px;
+    left: 10px;
+    width: 32px;
+    height: 22px;
+    background-image: url("../img/tick-tablet.svg");
   }
 }

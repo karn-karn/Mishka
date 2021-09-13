@@ -2,10 +2,16 @@
   padding: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @media (min-width: @tablet) {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: 167px auto;
+  }
+
+  @media (min-width: @desktop) {
+    width: 1050px;
+    grid-template-columns: 175px 700px;
   }
 }
 
@@ -15,19 +21,53 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 16px;
-  margin: 0;
+  margin: 0 0 22px 0;
   padding: 0;
+  width: 100%;
+
+  @media (max-width: @mobile-max) {
+    background-image: url("../img/line-form.svg");
+    background-repeat: no-repeat;
+    background-position: top 8px left 59px;
+    background-size: 100% 1px;
+  }
+
+  @media (min-width: @tablet) {
+    padding: 69px 0 0;
+    width: auto;
+  }
+
+  @media (min-width: @desktop) {
+    margin-left: 61px;
+  }
 }
 
 .more__desc {
+  height: 142px;
+  width: 100%;
+  padding: 17px;
+  margin: 0;
   color: fade(@black, 30%);
-  font-weight: 700;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
+  resize: none;
+  border: 2px solid @black-text;
+  box-sizing: border-box;
 
   @media (min-width: @tablet) {
     font-size: 19px;
     grid-column-start: 2;
     grid-row-start: 1;
+    margin-top: -57px;
+  }
+
+  &:focus {
+    color: @black-text;
+  }
+
+  &:hover,
+  &:active {
+    border-color: @tiffany-form;
   }
 }

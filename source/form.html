@@ -5,6 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Форма заказа | Интернет-магазин Mishka</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% -316px;
+    /* Mobile layout by default */
+    background-image: url( "img/Form Mobile.png" );
+  }
+  /* Tablet */
+  @media ( min-width: 768px ) {
+    HTML {
+      /* Tablet layout */
+      background-position:  50% 0;
+      background-image: url( "img/Form Tablet.png" );
+    }
+  }
+  /* Desktop */
+  @media ( min-width: 1150px ) {
+    HTML {
+      /* Desktop layout */
+      background-image: url( "img/Form Desktop.png" );
+    }
+  }
+</style>
+<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
 </head>
 <body class="page__body">
   <svg style="display: none">
@@ -31,7 +58,7 @@
     </symbol>
   </svg>
   <header class="page-header">
-    <div class="page-header__wrapper container">
+    <div class="page-header__wrapper">
       <a href="index.html" class="page-header__logo">
         <picture>
           <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
@@ -75,18 +102,18 @@
     <h1 class="page-form-main__title">Вязание на заказ</h1>
     <section class="page-form-main__order">
       <h2 class="visually-hidden">Форма заказа товара</h2>
-      <p class="page-form-main__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <p class="page-form-main__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму<br> заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="page-form-main__form form" method="post" action="https://echo.htmlacademy.ru">
         <fieldset class="form__type type">
           <legend class="type__title">Тип</legend>
           <ul class="type__list">
             <li class="type__item">
-              <input class="type__input" type="radio" name="" id="">
-              <label class="type__name" for="">Аксессуар для интерьера</label>
+              <input class="type__input visually-hidden" type="radio" name="type" value="interior" id="filter-interior" checked>
+              <label class="type__name" for="filter-interior">Аксессуар для интерьера</label>
             </li>
             <li class="type__item">
-              <input class="type__input" type="radio" name="" id="">
-              <label class="type__name" for="">Детская игрушка</label>
+              <input class="type__input visually-hidden" type="radio" name="type" value="toy" id="filter-toy">
+              <label class="type__name" for="filter-toy">Детская игрушка</label>
             </li>
           </ul>
         </fieldset>
@@ -95,28 +122,28 @@
             <legend class="color__title">Цвет</legend>
             <ul class="color__list">
               <li class="color__item">
-                <input class="color__checkbox" type="checkbox" name="" id="">
-                <label class="color__name" for="">Белый</label>
+                <input class="color__checkbox visually-hidden checked" type="checkbox" name="white" id="filter-white">
+                <label class="color__name" for="filter-white">Белый</label>
               </li>
               <li class="color__item">
-                <input class="color__checkbox" type="checkbox" name="" id="">
-                <label class="color__name" for="">Серый</label>
+                <input class="color__checkbox visually-hidden checked" type="checkbox" name="grey" id="filter-grey">
+                <label class="color__name" for="filter-grey">Серый</label>
               </li>
               <li class="color__item">
-                <input class="color__checkbox" type="checkbox" name="" id="">
-                <label class="color__name" for="">«Тиффани»</label>
+                <input class="color__checkbox visually-hidden" type="checkbox" name="tiffany" id="filter-tiffany">
+                <label class="color__name" for="filter-tiffany">«Тиффани»</label>
               </li>
               <li class="color__item">
-                <input class="color__checkbox" type="checkbox" name="" id="">
-                <label class="color__name" for="">Черный</label>
+                <input class="color__checkbox visually-hidden" type="checkbox" name="black" id="filter-black">
+                <label class="color__name" for="filter-black">Черный</label>
               </li>
               <li class="color__item">
-                <input class="color__checkbox" type="checkbox" name="" id="">
-                <label class="color__name" for="">Розовый</label>
+                <input class="color__checkbox visually-hidden" type="checkbox" name="pink" id="filter-pink">
+                <label class="color__name" for="filter-pink">Розовый</label>
               </li>
               <li class="color__item">
-                <input class="color__checkbox" type="checkbox" name="" id="">
-                <label class="color__name" for="">Оранжевый</label>
+                <input class="color__checkbox visually-hidden" type="checkbox" name="orange" id="filter-orange">
+                <label class="color__name" for="filter-orange">Оранжевый</label>
               </li>
             </ul>
           </div>
@@ -125,41 +152,41 @@
           <legend class="name__title">ФИО</legend>
           <ul class="name__list">
             <li class="name__item">
-              <label class="name__name" for="">Имя</label>
-              <input class="name__input" type="text" placeholder="Введите ваше имя*">
+              <label class="name__name" for="first-name">Имя</label>
+              <input class="name__input" type="text" id="first-name" placeholder="Введите ваше имя*">
             </li>
             <li class="name__item">
-              <label class="name__name" for="">Фамилия</label>
-              <input class="name__input" type="text" placeholder="Укажите фамилию*">
+              <label class="name__name" for="last-name">Фамилия</label>
+              <input class="name__input" type="text" id="last-name" placeholder="Укажите фамилию*">
             </li>
             <li class="name__item">
-              <label class="name__name" for="">Отчество</label>
-              <input class="name__input" type="text" placeholder="Отчество, если желаете">
+              <label class="name__name" for="patronymic">Отчество</label>
+              <input class="name__input" type="text" id="patronymic" placeholder="Отчество, если желаете">
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__contacts contacts-form">
           <legend class="visually-hidden">Контактные данные</legend>
-          <div class="contacts-form__wrapper container">
+          <div class="contacts-form__wrapper">
             <ul class="contacts-form__list">
               <li class="contacts-form__item">
-                <label class="contacts-form__name" for="">Тел</label>
-                <input class="contacts-form__input" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+                <label class="contacts-form__name" for="phone">Тел</label>
+                <input class="contacts-form__input" type="tel" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
               </li>
               <li class="contacts-form__item">
-                <label class="contacts-form__name" for="">E-mail</label>
-                <input class="contacts-form__input" type="email" placeholder="Ваш Email*">
+                <label class="contacts-form__name" for="mail">E-mail</label>
+                <input class="contacts-form__input" type="email" id="mail" placeholder="Ваш Email*">
               </li>
             </ul>
           </div>
         </fieldset>
         <fieldset class="form__more more">
-          <legend class="more__title">Доп</legend>
-          <textarea class="more__desc" name="" id="" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <legend class="more__title" for="description">Доп</legend>
+          <textarea class="more__desc" name="desc" id="description" cols="25" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
         <div class="form__wrapper container">
           <span class="form__note">*Поля обязательны для заполнения</span>
-          <input class="form__button button" type="submit" name="" id="" value="Отправить заказ">
+          <input class="form__button" type="submit" value="Отправить заказ">
         </div>
       </form>
     </section>
@@ -205,5 +232,6 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.min.js"></script>
 </body>
 </html>
