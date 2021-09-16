@@ -5,33 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Интернет-магазин Mishka</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- Pixel Glass -->
-<style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% -316px;
-    /* Mobile layout by default */
-    background-image: url( "img/Index Mobile.png" );
-  }
-  /* Tablet */
-  @media ( min-width: 768px ) {
-    HTML {
-      /* Tablet layout */
-      background-position:  50% 0;
-      background-image: url( "img/Index Tablet.png" );
-    }
-  }
-  /* Desktop */
-  @media ( min-width: 1150px ) {
-    HTML {
-      /* Desktop layout */
-      background-image: url( "img/Index Desktop.png" );
-    }
-  }
-</style>
-<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-<script src="../node_modules/pixel-glass/script.js"></script>
-<!-- // Pixel Glass -->
 </head>
 <body class="page__body">
   <svg style="display: none">
@@ -167,7 +140,7 @@
             <img class="hit__image" src="img/triple-set-mobile.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Три вязаные корзинки серо-бирюзового цвета">
         </picture>
         <p class="hit__price">Цена: 990 руб.</p>
-        <button class="hit__order button" type="button">Заказать</button>
+        <button class="hit__order button button-order" type="button">Заказать</button>
       </div>
     </section>
     <section class="page-main__about-us container about-us">
@@ -267,6 +240,21 @@
       </div>
     </div>
   </footer>
+  <section class="page__modal modal">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <form class="modal__form">
+          <p class="modal__form-title">Выберите размер:</p>
+          <p class="modal__form-options">
+            <input class="modal__input visually-hidden" type="radio" name="size" value="s" id="size-s" checked>
+            <label class="modal__option" for="size-s" tabindex="0"><b>s</b></label>
+            <input class="modal__input visually-hidden" type="radio" name="size" value="m" id="size-m">
+            <label class="modal__option" for="size-m" tabindex="0"><b>m</b></label>
+            <input class="modal__input visually-hidden" type="radio" name="size" value="l" id="size-l">
+            <label class="modal__option" for="size-l" tabindex="0"><b>l</b></label>
+          </p>
+          <input class="modal__button" type="submit" name="button" value="Добавить">
+      </form>
+  </section>
   <script src="js/script.min.js"></script>
 </body>
 </html>

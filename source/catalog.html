@@ -5,33 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог | Интернет-магазин Mishka</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- Pixel Glass -->
-<style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% -316px;
-    /* Mobile layout by default */
-    background-image: url( "img/Catalog Mobile.png" );
-  }
-  /* Tablet */
-  @media ( min-width: 768px ) {
-    HTML {
-      /* Tablet layout */
-      background-position:  50% 0;
-      background-image: url( "img/Catalog Tablet.png" );
-    }
-  }
-  /* Desktop */
-  @media ( min-width: 1150px ) {
-    HTML {
-      /* Desktop layout */
-      background-image: url( "img/Catalog Desktop.png" );
-    }
-  }
-</style>
-<link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-<script src="../node_modules/pixel-glass/script.js"></script>
-<!-- // Pixel Glass -->
 </head>
 <body class="page__body">
   <svg style="display: none">
@@ -122,7 +95,7 @@
             <span class="product__options">Рост 30 см, вес 200 г</span>
             <div class="product__wrapper">
               <b class="product__price">1 200 руб.</b>
-              <button class="product__checkout" type="button">
+              <button class="product__checkout button-order" type="button">
                 <svg width="20" height="19">
                   <use xlink:href="#cart"></use>
                 </svg>
@@ -149,7 +122,7 @@
             <span class="product__options">Диаметр 15 см, высота 10 см</span>
             <div class="product__wrapper">
               <b class="product__price">690 руб.</b>
-              <button class="product__checkout" type="button">
+              <button class="product__checkout button-order" type="button">
                 <svg width="20" height="19">
                   <use xlink:href="#cart"></use>
                 </svg>
@@ -176,7 +149,7 @@
             <span class="product__options">Диаметр 30 см, высота 30 см</span>
             <div class="product__wrapper">
               <b class="product__price">1 500 руб.</b>
-              <button class="product__checkout" type="button">
+              <button class="product__checkout button-order" type="button">
                 <svg width="20" height="19">
                   <use xlink:href="#cart"></use>
                 </svg>
@@ -239,6 +212,21 @@
       </div>
     </div>
   </footer>
+  <section class="page__modal modal">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <form class="modal__form">
+          <p class="modal__form-title">Выберите размер:</p>
+          <p class="modal__form-options">
+            <input class="modal__input visually-hidden" type="radio" name="size" value="s" id="size-s" checked>
+            <label class="modal__option" for="size-s" tabindex="0"><b>s</b></label>
+            <input class="modal__input visually-hidden" type="radio" name="size" value="m" id="size-m">
+            <label class="modal__option" for="size-m" tabindex="0"><b>m</b></label>
+            <input class="modal__input visually-hidden" type="radio" name="size" value="l" id="size-l">
+            <label class="modal__option" for="size-l" tabindex="0"><b>l</b></label>
+          </p>
+          <input class="modal__button" type="submit" name="button" value="Добавить">
+      </form>
+  </section>
   <script src="js/script.min.js"></script>
 </body>
 </html>
