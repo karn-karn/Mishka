@@ -1,48 +1,63 @@
 .promo {
+  position: relative;
+  width: 260px;
   display: grid;
+  border: 1px solid @grey-border;
+
+  @media (min-width: @tablet) {
+    width: auto;
+  }
 
   @media (min-width: @desktop) {
-    grid-template-columns: auto auto;
-    grid-template-rows: repeat(3, auto);
+    width: 1050px;
   }
 }
 
 .promo__title {
-  margin: 0;
-  padding: 0;
+  margin: 20px 34px 26px;
+  padding: 0 0 0 57px;
   color: @black;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   background-image: url("../img/video.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: top 12px left 0;
 
   @media (min-width: @tablet) {
     font-size: 20px;
+    margin: 0 42px 26px;
+    padding-left: 65px;
+    background-position: 0 0;
   }
 
   @media (min-width: @desktop) {
-    grid-column-start: 2;
-    grid-row-start: 1;
+    padding: 49px 0 0 0;
+    margin: 47px 79px 27px 762px;
   }
 }
 
 .promo__player {
+  margin: 0 0 35px 0;
   position: relative;
 
   @media (min-width: @tablet) and (max-width: 1149px) {
     grid-row-start: 1;
+    display: flex;
+    margin-bottom: 39px;
+    border-bottom: 1px solid @grey-border;
   }
 
   @media (min-width: @desktop) {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
   }
 }
 
 .promo__video {
+  display: block;
   background-color: transparent;
   background-image: url("../img/video-mobile.jpg");
   background-repeat: no-repeat;
@@ -50,6 +65,7 @@
   background-size: 100%;
 
   @media (min-width: @tablet) and (max-width: 1149px) {
+    flex-grow: 1;
     width: 668px;
     height: 455px;
     background-image: url("../img/video-tablet.jpg");
@@ -90,7 +106,7 @@
 }
 
 .promo__description {
-  margin: 0;
+  margin: 0 30px 41px 34px;
   padding: 0;
   font-size: 13px;
   line-height: 24px;
@@ -98,21 +114,29 @@
   @media (min-width: @tablet) {
     font-size: 15px;
     line-height: 30px;
+    margin: 0 40px 40px;
   }
 
   @media (min-width: @desktop) {
-    grid-column-start: 2;
-    grid-row-start: 2;
+    margin: 0 0 52px 762px;
   }
 }
 
 .promo__checkout {
+  margin: 0 auto 33px;
+  width: 188px;
   text-decoration: none;
   color: @black-text;
 
+  @media (min-width: @tablet) {
+    margin: 0 42px 46px;
+    width: auto;
+  }
+
   @media (min-width: @desktop) {
-    grid-column-start: 2;
-    grid-row-start: 3;
+    width: 226px;
+    justify-self: end;
+    margin: 0 57px 60px 0;
   }
 }
 

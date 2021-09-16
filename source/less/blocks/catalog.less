@@ -1,12 +1,30 @@
 .catalog__list {
-  margin: 0;
+  margin: 0 0 29px;
   padding: 0;
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 53px;
+  }
 
   @media (min-width: @desktop) {
-    flex-direction: row;
-    justify-content: space-between;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 51px;
+    margin-bottom: 55px;
+  }
+}
+
+.catalog__item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: 54px;
+    }
+
+    @media (min-width: @desktop) {
+      margin-bottom: 0;
+    }
   }
 }
