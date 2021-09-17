@@ -13,27 +13,27 @@
     }
   });
 
-const cartSent = document.querySelectorAll(".button-order");
-const cartPopup = document.querySelector(".page__modal");
-const cartClose = cartPopup.querySelector(".modal__button");
+const cartSent = document.querySelectorAll('.button-order');
+const cartPopup = document.querySelector('.page__modal');
+const cartClose = cartPopup.querySelector('.modal__button');
 
-for (var i = 0; i < cartSent.length; i++) {
-  (function(index) {
-    cartSent[index].addEventListener("click", function(evt) {
+for (let i = 0; i < cartSent.length; i++) {
+    cartSent[i].addEventListener('click', (evt) => {
       evt.preventDefault();
-      cartPopup.classList.add("js-modal-show");
+      cartPopup.classList.add('js-modal-show');
   });
+};
 
-cartClose.addEventListener("click", function (evt) {
+cartClose.addEventListener('click', (evt) => {
   evt.preventDefault();
-  cartPopup.classList.remove("js-modal-show");
+  cartPopup.classList.remove('js-modal-show');
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', (evt) => {
   if (evt.keyCode === 27) {
-    if (cartPopup.classList.contains("js-modal-show")) {
+    if (cartPopup.classList.contains('js-modal-show')) {
       evt.preventDefault();
-      cartPopup.classList.remove("js-modal-show");
+      cartPopup.classList.remove('js-modal-show');
     }
   }
 });

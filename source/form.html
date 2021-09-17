@@ -95,11 +95,11 @@
             <legend class="color__title">Цвет</legend>
             <ul class="color__list">
               <li class="color__item">
-                <input class="color__checkbox visually-hidden checked" type="checkbox" name="white" id="filter-white">
+                <input class="color__checkbox visually-hidden" type="checkbox" name="white" id="filter-white" checked>
                 <label class="color__name" for="filter-white">Белый</label>
               </li>
               <li class="color__item">
-                <input class="color__checkbox visually-hidden checked" type="checkbox" name="grey" id="filter-grey">
+                <input class="color__checkbox visually-hidden" type="checkbox" name="grey" id="filter-grey" checked>
                 <label class="color__name" for="filter-grey">Серый</label>
               </li>
               <li class="color__item">
@@ -126,11 +126,11 @@
           <ul class="name__list">
             <li class="name__item">
               <label class="name__name" for="first-name">Имя</label>
-              <input class="name__input" type="text" id="first-name" placeholder="Введите ваше имя*">
+              <input class="name__input" type="text" id="first-name" required placeholder="Введите ваше имя*">
             </li>
             <li class="name__item">
               <label class="name__name" for="last-name">Фамилия</label>
-              <input class="name__input" type="text" id="last-name" placeholder="Укажите фамилию*">
+              <input class="name__input" type="text" id="last-name" required placeholder="Укажите фамилию*">
             </li>
             <li class="name__item">
               <label class="name__name" for="patronymic">Отчество</label>
@@ -144,11 +144,11 @@
             <ul class="contacts-form__list">
               <li class="contacts-form__item">
                 <label class="contacts-form__name" for="phone">Тел</label>
-                <input class="contacts-form__input" type="tel" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+                <input class="contacts-form__input" type="tel" id="phone" required placeholder="+7 ХХХ ХХХ ХХ ХХ*">
               </li>
               <li class="contacts-form__item">
                 <label class="contacts-form__name" for="mail">E-mail</label>
-                <input class="contacts-form__input" type="email" id="mail" placeholder="Ваш Email*">
+                <input class="contacts-form__input" type="email" id="mail" required placeholder="Ваш Email*">
               </li>
             </ul>
           </div>
@@ -157,7 +157,7 @@
           <legend class="more__title" for="description">Доп</legend>
           <textarea class="more__desc" name="desc" id="description" cols="25" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
-        <div class="form__wrapper container">
+        <div class="form__wrapper">
           <span class="form__note">*Поля обязательны для заполнения</span>
           <input class="form__button" type="submit" value="Отправить заказ">
         </div>

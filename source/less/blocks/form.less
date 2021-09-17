@@ -59,22 +59,24 @@
     margin: auto 0;
     padding: 0;
   }
-
-  @media (min-width: @desktop) {
-    margin-right: 175px;
-  }
 }
 
 .form__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 55px;
+  margin: 0 auto 55px;
 
   @media (min-width: @tablet) {
     flex-direction: row-reverse;
     justify-content: space-between;
-    margin-bottom: 51px;
+    margin: 0 50px 51px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 700px;
+    margin: 0 auto 51px;
+
   }
 }
 
@@ -98,10 +100,6 @@
   @media (min-width: @tablet) {
     font-size: 17px;
     width: 230px;
-  }
-
-  @media (min-width: @desktop) {
-    margin-left: 175px;
   }
 
   &:hover {

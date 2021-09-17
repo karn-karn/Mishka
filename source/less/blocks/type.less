@@ -63,7 +63,11 @@
   align-items: flex-start;
 
   &:first-child {
-    margin-bottom: 12px;
+    margin-bottom: 24px;
+
+    @media (min-width: 347px) {
+      margin-bottom: 33px;
+    }
 
     @media (min-width: @tablet) {
       margin-bottom: 58px;

@@ -1,6 +1,10 @@
 .product {
-  @media (min-width: @tablet) and (max-width: 1149px) {
+  @media (min-width: @tablet) {
     display: flex;
+  }
+
+  @media (min-width: @desktop) {
+    flex-direction: column;
   }
 }
 
